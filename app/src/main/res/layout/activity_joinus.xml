@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/darazsignup"
+    android:orientation="vertical"
+    tools:context=".ui.JoinusActivity">
+
+    <TextView
+        android:id="@+id/textViewdaraz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="daraz"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewdaraz2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="SHOP OVER"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewdaraz"
+        app:layout_constraintStart_toStartOf="@+id/textViewdaraz"
+        app:layout_constraintTop_toBottomOf="@id/textViewdaraz"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <TextView
+        android:id="@+id/textViewdaraz3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="250,000 PRODUCTS AT"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewdaraz2"
+        app:layout_constraintStart_toStartOf="@+id/textViewdaraz2"
+        app:layout_constraintTop_toBottomOf="@id/textViewdaraz2"
+        tools:layout_editor_absoluteY="227dp" />
+
+    <TextView
+        android:id="@+id/textViewdaraz4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  UNMISSABLE PRICES"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewdaraz3"
+        app:layout_constraintStart_toStartOf="@+id/textViewdaraz3"
+        app:layout_constraintTop_toBottomOf="@id/textViewdaraz3"
+        tools:layout_editor_absoluteY="260dp" />
+
+    <Button
+        android:id="@+id/btncreateaccount"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/button_gadient"
+        android:text="create an account"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewdaraz4"
+        app:layout_constraintVertical_bias="0.438" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_round"
+        android:text="Login"
+        android:textColor="@color/orange"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btncreateaccount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btncreateaccount"
+        app:layout_constraintTop_toBottomOf="@+id/btncreateaccount"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <TextView
+        android:id="@+id/textViewdaraz5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Connect With Other Ways"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btnfacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginStart="50dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/round_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/facebooklogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewdaraz5" />
+
+    <ImageButton
+        android:id="@+id/btngoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/btnfacebook"
+        android:adjustViewBounds="true"
+        android:background="@drawable/round_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/googlelogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnfacebook"
+        app:layout_constraintTop_toBottomOf="@+id/textViewdaraz5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
