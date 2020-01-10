@@ -7,7 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.LoginActivity"
     android:background="@drawable/backgroundsigninup">
-
+    <Button
+        android:id="@+id/btnexit"
+        android:text="Back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

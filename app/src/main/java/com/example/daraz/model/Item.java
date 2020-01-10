@@ -1,22 +1,22 @@
 package com.example.daraz.model;
 
 public class Item {
-    int imgid;
+    String image;
     String desc;
     float price;
 
-    public Item(int imgid, String desc, float price) {
-        this.imgid = imgid;
+    public Item(String image, String desc, float price) {
+        this.image = image;
         this.desc = desc;
         this.price = price;
     }
 
-    public int getImgid() {
-        return imgid;
+    public String getImage() {
+        return image;
     }
 
-    public void setImgid(int imgid) {
-        this.imgid = imgid;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getDesc() {

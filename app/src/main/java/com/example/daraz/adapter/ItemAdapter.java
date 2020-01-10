@@ -11,7 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.daraz.R;
+import com.example.daraz.Url.Url;
 import com.example.daraz.model.Item;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.itemAdapterVie
     public void onBindViewHolder(@NonNull itemAdapterViewHolder holder, int position) {
 
         final Item items=itemlist.get(position);
-        holder.imgitem.setImageResource(items.getImgid());
+        Picasso.get().load(Url.base_url_image+itemlist.get(position).getImage()).into(holder.imgitem);
         holder.tvitemdesc.setText(items.getDesc());
         holder.tvitemprice.setText("Rs. "+items.getPrice()+" /-");
 
