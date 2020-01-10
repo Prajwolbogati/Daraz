@@ -68,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
 
-                user users = new user(Name, email, password,PhoneNo, SMS);
+                user users = new user(Name,email,password,PhoneNo,SMS);
 
                 UserApi usersAPI = Url.getInstance().create(UserApi.class);
                 Call<SignupResponse> signUpCall = usersAPI.registerUser(users);

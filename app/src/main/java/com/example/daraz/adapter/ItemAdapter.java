@@ -38,8 +38,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.itemAdapterVie
     public void onBindViewHolder(@NonNull itemAdapterViewHolder holder, int position) {
 
         final Item items=itemlist.get(position);
-        Picasso.get().load(Url.base_url_image+itemlist.get(position).getImage()).into(holder.imgitem);
-        holder.tvitemdesc.setText(items.getDesc());
+        Picasso.get().load(Url.base_url_image+itemlist.get(position).getItemImage()).into(holder.imgitem);
+        holder.tvitemdesc.setText(items.getItemName());
         holder.tvitemprice.setText("Rs. "+items.getPrice()+" /-");
 
     }
