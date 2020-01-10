@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pay_navigation"
+        android:icon="@drawable/ic_credit_card"
+        android:title="To Pay"/>
+    <item
+        android:id="@+id/review_navigation"
+        android:icon="@drawable/ic_chat"
+        android:title="To Review"/>
+    <item
+        android:id="@+id/return_navigation"
+        android:icon="@drawable/ic_return"
+        android:title="My Return"/>
+    <item
+        android:id="@+id/cancellation_navigation"
+        android:icon="@drawable/ic_file"
+        android:title="My Cancellation"/>
+</menu>
