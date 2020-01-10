@@ -1,30 +1,62 @@
 package com.example.daraz;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import com.example.daraz.ui.account.AccountFragment;
+import com.example.daraz.ui.cart.CartFragment;
+import com.example.daraz.ui.home.HomeFragment;
+import com.example.daraz.ui.message.MessageFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
-
+    BottomNavigationView nav_bottom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_account, R.id.navigation_message)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
+        nav_bottom = findViewById(R.id.nav_bottom);
+
+        nav_bottom.setOnNavigationItemSelectedListener(navigationitemselectedlistener);
+        openFragment(new HomeFragment());
+    }
+
+    BottomNavigationView.OnNavigationItemSelectedListener navigationitemselectedlistener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.navigation_home:
+                            openFragment(new HomeFragment());
+                            return true;
+                        case R.id.navigation_message:
+                            openFragment(new MessageFragment());
+                            return true;
+                        case R.id.navigation_cart:
+                            openFragment(new CartFragment());
+                            return true;
+                        case R.id.navigation_account:
+                            openFragment(new AccountFragment());
+                            return true;
+                    }
+                    return false;
+                }
+            };
+
+    public void openFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.commit();
     }
 
 }
+
