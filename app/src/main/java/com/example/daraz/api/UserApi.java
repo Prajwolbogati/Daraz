@@ -10,7 +10,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface UserApi {
-    @POST("user/signup")
+    @POST("signup")
     Call<SignupResponse> registerUser(@Body user users);
 
     @FormUrlEncoded
